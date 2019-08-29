@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,');
+* {
+outline: none !important;
+scroll-behavior: smooth;
+border-radius: 10px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+}
+
+header {
+    position: relative;
+    z-index: 100000;
+}
+
+p {
+    font-size: 1.15rem;
+
+}
+.navbar {
+    background: transparent !important;
+    transition: 1s;
+}
+
+.navbar.scrolled {
+    background: #000 !important;
+    transition: 1s;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #000;
+    background: #fff;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255,255,255,.8);
+}
+.navbar-light .navbar-nav .active>.nav-link:hover {
+   color: #000;
+}
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+    color: rgb(118, 118, 118);
+}
+.navbar-light .navbar-brand, .navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:visited{
+    color: rgba(255,255,255,1);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.navbar-light .navbar-toggler-icon{
+    background: url(../img/menu.svg);
+}
+/*Styles for first part - banner with background image and main texts*/
+.banner {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: black url(../img/bannerBg.jpg);
+    background-size: cover;
+}
+.banner:before,
+.sec2:before,
+.contact:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(#000, transparent);
+    pointer-events: none;
+}
+.banner:after,
+.sec2:after,
+.contact:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(360deg, #000, transparent);
+    pointer-events: none;
+}
+.height100p {
+    height: 100vh;
+}
+.h100 {
+    height: 100%;
+}
+.contentBox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.contentBox h1 {
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    font-size: 5rem;
+}
+
+.contentBox p {
+    color: white;
+}
+/*Styles for EXPLORE section*/
+.sec1 {
+    padding: 100px 0;
+    background: black;
+}
+.headerText {
+    color: white;
+}
+.headerText h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.placeBx {
+    position: relative;
+    max-width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    background: #000;
+    margin-top: 30px;
+}
+
+.placeBx .imgBx {
+    width: 100%;
+    height: 100%;
+}
+.placeBx .imgBx img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.placeBx .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+}
+.placeBx .content h3 {
+    position: relative;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0,0,0,0.4);
+    font-size: 20px;
+    font-weight: 800;
+    width: 100%;
+    text-align: center;
+}
+.placeBx .content h3 span {
+    font-size: 12px;
+    font-weight: 400;
+}
+/*Styles for ADVENTURE section*/
+.sec2 {
+    position: relative;
+    background: url(../img/bannerBg1.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+.sec2 h2 {
+    color: white;
+    font-weight: 800;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+}
+.btnD1 {
+    border: 2px solid white;
+    color: black;
+    background: white;
+    border-radius: 50px;
+    padding: 15px 50px;
+    font-size: 1.15rem;
+    outline: none;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.btnD1:hover {
+    color: blue;
+}
+/*Styles for BLOG section*/
+.blog {
+    position: relative;
+    padding: 100px 0;
+    background: black;
+
+}
+.blogpost {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    background: white;
+}
+.blogpost .imgBx {
+    height: 400px;
+
+}
+.blogpost .imgBx img {
+    width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.blogpost .content {
+    padding: 15px;
+}
+.blogpost .content h1 {
+    text-align: center;
+    margin: 0;
+    padding: 0 0 10px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.btnD2 {
+    background: #262626;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    float: right;
+}
+.btnD2:hover {
+    color: #a9a9a9;
+}
+/*Styles for CONTACTS section*/
+.contact {
+    position: relative;
+    padding: 10px 0;
+    background: url(../img/contactBg.jpg);
+    background-size: cover;
+    min-height: 100vh;
+}
+.form-group label {
+    color: white;
+}
+.contact .form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    height: 50px;
+    color: white;
+    border-radius: 15px;
+    background: rgba(0,0,0,0.6);
+     font-size: 1.25rem;
+}
+.contact .form-control:focus,
+.contact .form-control:hover {
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255,1);
+    box-shadow: none;
+    color: #b0b0b0;
+}
+.contact .textarea {
+    height: 90px;
+}
+/*Styles for FOOTER section*/
+.sci {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sci li {
+    list-style: none;
+    margin: 0 20px;
+}
+.sci li a {
+    color: #b4b4b4;
+    font-size: 2em;
+    transition: 0.5s;
+}
+.cpryt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 20px;
+}
+.cpryt a {
+    color: #b0b0b0;
+    font-size: 1.2rem;
+    font-weight: 900;
+    transition: 1s;
+}
+.cpryt a:hover {
+    transform: scale(1.2) translateY(45%);
+}
+
+/*Media requires*/
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+@media (max-width: 992px) {
+    .navbar-light .navbar-toggler {
+        background: black;
+        border-radius: 0;
+    }
+    .banner {
+        min-height: 100vh;
+        padding: 100px 0;
+    }
+    .contentBox h1,
+    .sec2 h2{
+        font-size: 5em;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .contentBox p {
+        font-size: 2rem;
+    }
+    .headerText h2 {
+        font-size: 4rem;
+        width: 100%;
+    }
+    .placeBx {
+        max-width: 500px;
+    }
+}
